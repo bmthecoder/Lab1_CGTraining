@@ -1,0 +1,23 @@
+package Lab1;
+import java.util.*;
+public class CheckIncreasingNumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		String str = checkNumber(a)?"not an increasing number":"an increasing number";
+		System.out.println(str);
+	}
+	static boolean checkNumber(int n){
+		int currentdigit = n%10;
+		boolean flag = false;
+		n = n/10;
+		while (n>0){
+			if(currentdigit<=n%10){
+				flag = true;
+				break;}
+			currentdigit = n%10;
+			n=n/10;
+		}
+		return flag;
+	}
+}
