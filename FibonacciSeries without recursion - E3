@@ -1,0 +1,21 @@
+package Lab1;
+import java.util.*;
+public class FibonacciSequence {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n= sc.nextInt();
+		System.out.println(fibonacciTerm(n));
+	}
+	static int fibonacciTerm(int a){
+		int firstTerm =1;
+		int secondTerm =1;
+		int thirdTerm =0;
+		for(int i=3;i<=a;i++){
+			thirdTerm = firstTerm + secondTerm;
+			firstTerm = secondTerm;
+			secondTerm = thirdTerm;
+		}
+		return thirdTerm;
+	}
+
+}
