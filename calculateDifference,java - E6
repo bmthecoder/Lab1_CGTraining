@@ -1,0 +1,18 @@
+package Lab1;
+import java.util.*;
+public class CalculateDifference {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a = sc.nextInt();
+		System.out.println(calculateDifference(a));
+	}
+	static int calculateDifference(int n){
+		int sumOfsquares=0;
+		int sum=0;
+		for(int i=1;i<=n;i++){
+			sumOfsquares+=i*i;
+			sum+=i;
+		}
+		return Math.abs(sumOfsquares -(sum*sum));
+	}
+}
